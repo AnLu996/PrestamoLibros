@@ -1,0 +1,352 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    padding: 30px 20px;
+    z-index: 10;
+}
+
+header.abajo {
+    background: #001F3D;
+    padding: 30px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo {
+    height: 10vh;
+    position: relative;
+    top: 0vh;
+    transition: 1.5s;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 20px;
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.7s;
+}
+
+.inicio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(https://i.ibb.co/Lzz7Jy6/CIUDADANIA.png);
+    opacity: 0.9;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.inicio .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inicio .text h1 {
+    font-size: 15vh;
+    color: #ffffff;
+    font-family: 'OCR A';
+}
+
+.inicio .text h2 {
+    font-size: 8vh;
+    color: #ffffff;
+    font-family: 'OCR A';
+}
+
+.inicio .text h3 {
+    font-size: 10vh;
+    color: #ffffff;
+    font-family: Impact;
+}
+
+.libros {
+    background: #ffffff;
+}
+
+.center {
+    text-align: center;
+}
+
+.center h2 {
+    font-size: 8vh;
+    color: #001F3D;
+    margin-top: 30px;
+    font-family: 'OCR A';
+}
+
+.center h3 {
+    font-size: 5vh;
+    color: #001F3D;
+    margin-top: 30px;
+    font-family: 'OCR A';
+}
+
+.center p {
+    color: #07549D;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    line-height: 28px;
+    font-size: 4vh;
+    font-family: 'OCR A';
+}
+
+.libros-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    grid-gap: 2.5rem;
+    align-items: center;
+    margin-top: 4.5rem;
+}
+
+.rows {
+    background-color: var(--secound-bg-color);
+    padding: 40px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .35s;
+}
+
+.rows h3 {
+    color: #001F3D;
+    font-size: 5vh;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.rows p {
+    color: #000000;
+    line-height: 25px;
+    font-size: 3vh;
+}
+
+.rows:hover {
+    transform: translateY(-8px);
+}
+
+.responsables {
+    background: rgba(0,30,59,0.6);
+}
+
+.box {
+    background-color: rgb(15, 14, 14);
+    padding: 40px 20px;
+    border-radius: 10px;
+    transition: all .35s;
+}
+
+.box h3 {
+    color: #ffffff;
+    font-size: 5vh;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.box p {
+    color: #ffffff;
+    line-height: 25px;
+    font-size: 3vh;
+}
+
+/*.box:hover{
+        transform: scale(1.1);
+    }*/
+.contacto {
+    background: #ffffff;
+}
+
+.adress {
+    font-size: 3vh;
+    margin-bottom: 20px;
+}
+
+body {
+	background: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+}
+
+.btn-abrir-popup {    
+    width: 170px;
+    height: 50px;
+    line-height: 40px;
+    color: #fff;
+    background: #07549D;
+    border-radius: 45px;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s ease all;   
+}
+
+.btn-abrir-popup:hover {
+	background: rgba(94,125,227, .9);
+
+}
+
+.btn-direccionar {
+    width: 170px;
+    height: 50px;
+    line-height: 40px;
+    color: #fff;
+    background: #001F3D;
+    border-radius: 45px;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.btn-direccionar:hover {
+    background: rgba(94,125,227, .9);
+}
+
+/* ------------------------- */
+/* POPUP */
+/* ------------------------- */
+
+.overlay {
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.popup {
+    background: #f8f8f8;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5);
+    border-radius: 10px;
+    font-family: "Chakra+Petch", sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 50vw;
+    transition: .3s ease all;
+    /*transform: scale(0.7);
+    opacity: 0;*/
+}
+
+.popup .btn-cerrar-popup {
+    font-size: 25px;
+    line-height: 25px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+
+}
+
+.popup .btn-cerrar-popup:hover {
+    color: #000000;
+}
+
+.popup h3 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    /*opacity: 0;*/
+}
+
+.popup h4 {
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    /*opacity: 0;*/
+}
+
+.popup form .contenedor-inputs {
+    /*opacity: 0;*/
+}
+
+.popup form .contenedor-inputs input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 52px;
+    text-align: center;
+    border: 1px solid #BBBBBB;
+}
+
+.popup form .btn-submit {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #5E7DE3;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover {
+    background: rgba(94,125,227, .9);
+}
+
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+
