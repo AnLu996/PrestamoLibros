@@ -33,8 +33,9 @@
 
 </head>
 <body>
-    
-        <header>
+    <form id="form1" runat="server" onsubmit="return validar_contenido()">
+        
+        <header >
             <img src="https://i.ibb.co/6w6WFzN/UNSABLANCO.png" alt="unsa-logo" class="logo"/>
             <nav>
                 <ul>
@@ -42,68 +43,90 @@
                         <li><a href="#Libros">Libros</a></li>
                         <li><a href="#Responsables">Centro de estudiantes</a></li>  
                         <li><a href="#Escuela">Sobre la escuela</a></li>
+                        <li><a href="#Registro">Regístrate</a></li>
                         <li><a href="#Contacto">Contacto</a></li>
                 </ul>
             </nav>
-        <!--ENCABEZADO-->
         </header>
+        <!--ENCABEZADO-->
         <section id="Inicio" class="inicio">  
             <div class="text">
                 <h1>Sistema Bibliotecario</h1>
                 <hr />
                 <h2>Computer Science</h2>            
                 
-                <button id="btn-abrir-popup" class="btn-abrir-popup">Registrarse</button>
+                <button id="Singin" class="btn-abrir-popup" onclick="window.location.href='#Registro'">Registrarse</button>
                 <button id="Login" class="btn-direccionar">Iniciar Sesión</button>
-                <!--<button id="Singin" class="btn-abrir-popup" text="Registarse" />
-                <button id="Login" class="btn button2" text="Iniciar Sesión"  />-->
 
-            </div>
-            <div class="overlay" id="overlay">
-                <div class="popup" id="popup">
-                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h3>REGISTRO</h3>
-                    <h4>Registrate y accede a la gran variedad de libros que tenemos para ti :D</h4>
-                    
-                    <form action="#">
-                    
-                        <div class="contenedor-inputs">
-						    <input type="text" placeholder="Nombre"/>
-						    <input type="email" placeholder="Correo"/>
-					    </div>
-					        <input type="submit" class="btn-submit" value="Registrarse"/>
-
-                    </form>
-                </div>
             </div>
         </section>
+
+        <div class="container col-10">
         <!--LIBROS-->
         <section id="Libros" class="libros">
             <div class="center">
                 <h2>Libros</h2>
                 <p>Les presentamos algunos de los libros con los que contamos:</p>
             </div>
-            <div class="libros-content container">
-                <div class="rows">
-                    <h3>LIBRO 1</h3>
-                    <p>Descripción</p>
+            <div class="libros-content containerbook">
+                <div class="card" style="--clr: #009688">
+                    <div class="img-box">
+                        <img src="https://mediacdn.nhbs.com/jackets/jackets_orig/jpics/220891.jpg"/>
+                    </div>
+                    <div class="content">
+                        <h2>Learning SQL</h2>
+                        <h4>Beaulieu A., 2009</h4>
+                        <p>
+                            
+                            Actualizada para los últimos sistemas de administración de 
+                            bases de datos, incluidos MySQL 6.0, Oracle 11g y SQL Server 
+                            2008 de Microsoft, esta guía introductoria lo pondrá en 
+                            funcionamiento con SQL rápidamente. Ya sea que necesite 
+                            escribir aplicaciones de bases de datos, realizar tareas 
+                            administrativas o generar informes, Learning SQL, segunda 
+                            edición, lo ayudará a dominar fácilmente todos los 
+                            fundamentos de SQL.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="rows">
-                    <h3>LIBRO 2</h3>
-                    <p>Descripción</p>
+                <div class="card" style="--clr: #009688">
+                    <div class="img-box">
+                        <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/a1/a3/a1a3e675a71e800dca15c4a1af729057.jpg"/>
+                    </div>
+                    <div class="content">
+                        <h2>Matemáticas Discretas</h2>
+                        <h4>Richard Johnsonbaugh, 2005</h4>
+                        <p>
+
+                            Cómo programar en C++, 10/e proporciona una introducción 
+                            Este libro se diseñó para un curso de introducción a las 
+                            matemáticas discretas. La exposición es clara y adecuada, 
+                            además de que contiene abundantes ejercicios. Esta edición, 
+                            al igual que las anteriores, incluye temas como algoritmos,
+                            combinatoria, conjuntos, funciones e inducción matemática. 
+                            También toma en cuenta la comprensión y construcción de pruebas
+                            y, en general, el reforzamiento matemático.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="rows">
-                    <h3>LIBRO 3</h3>
-                    <p>Descripción</p>
-                </div>
-                
-                <div class="rows">
-                    <h3>LIBRO 4</h3>
-                    <p>Descripción</p>
-                </div>
+                <div class="card" style="--clr: #009688">
+                    <div class="img-box">
+                        <img src="https://deitel.com/wp-content/uploads/2020/01/c-plus-plus-how-to-program-10e.jpg"/>
+                    </div>
+                    <div class="content">
+                        <h2>C++ How to Program </h2>
+                        <h4>Deitel P., Deitel H., 2017</h4>
+                        <p>
 
+                            Cómo programar en C++, 10/e proporciona una introducción 
+                            clara, atractiva y entretenida a la programación en C++11
+                            y C++14 con cientos de programas totalmente codificados y
+                            explicaciones detalladas.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -128,6 +151,95 @@
 
         </section>-->
 
+        <!--REGISTRO-->
+        <section id="Registro" class="Registro">
+
+
+            <div class="center">
+                <h2>Regístrate:</h2> <br/>
+            </div>
+                <div class="row">
+                    <label id="labelname" class="col-sm-2 col-form-label formato centrarf">Nombres:</label>
+                    <div class="col-4">
+                        <asp:TextBox runat="server" ID="nombre" class="form-control" type="text"  /><br/>
+                    </div>
+                
+                    <label id="labellastname" class="col-sm-2 col-form-label formato centrarf">Apellidos:</label>
+                    <div class="col-4">
+                        <asp:TextBox runat="server" ID="apellido" class="form-control" type="text"  /><br/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label id="labelmail" class="col-sm-2 col-form-label formato centrarf">Correo institucional:</label>
+                    <div class="col-4">
+                       <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">@</span>
+                            <asp:TextBox runat="server" ID="email" type="text" class="form-control"/>
+                       </div>
+                    </div>
+                    
+                    <label id="labelcui" class="col-sm-2 col-form-label formato centrarf">CUI:</label>
+                    <div class="col-4 centrar">
+                        <asp:TextBox runat="server" ID="cui" class="form-control" type="number"  /><br/>
+                    </div>
+                 </div>
+
+                 <div class="row">
+                    <label id="labelcarreer" class="col-sm-2 col-form-label formato centrarf">Carrera:</label>
+                    <div class="col-4 centrar">
+                        <asp:DropDownList ID="carrera" class="form-control" runat="server"></asp:DropDownList><br/>
+                    </div> <br/>
+                    
+                    <label id="labelrol" class="col-sm-2 col-form-label formato centrarf">Rol:</label>
+                    <div class="col-4">
+                        <div class="form-check form-check-inline"> 
+                            <asp:RadioButton runat="server" class="form-check-input" ID="estudiante" value="Estudiante" />
+                            <label class="form-check-label">Estudiante</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <asp:RadioButton runat="server" class="form-check-input" ID="docente" value="Docente" />
+                            <label class="form-check-label">Docente</label>
+                        </div> 
+                        <div class="form-check form-check-inline">
+                            <asp:RadioButton runat="server" class="form-check-input" ID="egresado" value="Egresado" />
+                            <label class="form-check-label">Egresado</label>
+                        </div> 
+                    </div> <br />
+                 </div>
+                
+                <div class="row">
+                    <label id="labelpassword" class="col-sm-2 col-form-label formato centrarf">Contraseña:</label>
+                    <div class="col-4">
+                        <asp:TextBox runat="server" ID="password" class="form-control" type="text"  /><br/>
+                    </div>
+                    
+                    <label id="labelpassword2" class="col-sm-2 col-form-label formato centrarf">Confirma la contraseña:</label>
+                    <div class="col-4">
+                        <asp:TextBox runat="server" ID="password2" class="form-control" type="text"  /><br/>
+                    </div>
+                 </div>
+
+
+                 <div class="row justify-content-center">                    
+                     <asp:Button ID="ButtonLimpiar" class="btn btn-dark" runat="server" Text="Limpiar" OnClientClick="return limpiar_contenido();"/>
+                     <asp:Button ID="ButtonEnviar" runat="server" Text="Enviar" OnClientClick="var a = validar_contenido(); return a;" class="btn btn-success btn-lg" OnClick="ButtonEnviar_Click" />
+                 </div>
+
+                <div class="row">
+                   <asp:Label runat="server" ID="labelreg" class="col-sm-2 col-form-label formato centrarf" visible="false">Registros:</asp:Label><br/>             
+                </div>
+                 <div class="row">
+                     <div class="col-xl-11">
+                        <asp:TextBox runat="server" ID="Info" class="form-control formatotextbox" cols="10" rows="4" TextMode="MultiLine" visible="false" enable="false"></asp:TextBox><br/>
+                     </div><br/>
+                 </div>
+           
+
+
+
+        </section>
+
 
         <!--CONTACTO-->
         <section id="Contacto" class="contacto">
@@ -145,8 +257,9 @@
             </address>
             
         </section>
-    
-    <script src="JavaScript.js"></script>
+        </div>
+
+    </form>
 </body>
 
 </html>
